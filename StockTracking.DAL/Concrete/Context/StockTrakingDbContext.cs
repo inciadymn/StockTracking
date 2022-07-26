@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using StockTracking.DAL.EntityTypeConfiguration;
+using StockTracking.DAL.Concrete.Context.EntityTypeConfiguration;
 using StockTracking.Model.Entities;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StockTracking.DAL
+namespace StockTracking.DAL.Concrete
 {
     class StockTrakingDbContext : DbContext
     {
