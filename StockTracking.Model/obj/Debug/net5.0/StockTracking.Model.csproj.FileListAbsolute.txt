@@ -1,0 +1,12 @@
+D:\Inci\Projects\StockTracking\StockTracking.Model\bin\Debug\net5.0\StockTracking.Model.deps.json
+D:\Inci\Projects\StockTracking\StockTracking.Model\bin\Debug\net5.0\StockTracking.Model.dll
+D:\Inci\Projects\StockTracking\StockTracking.Model\bin\Debug\net5.0\ref\StockTracking.Model.dll
+D:\Inci\Projects\StockTracking\StockTracking.Model\bin\Debug\net5.0\StockTracking.Model.pdb
+D:\Inci\Projects\StockTracking\StockTracking.Model\obj\Debug\net5.0\StockTracking.Model.csproj.AssemblyReference.cache
+D:\Inci\Projects\StockTracking\StockTracking.Model\obj\Debug\net5.0\StockTracking.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\Inci\Projects\StockTracking\StockTracking.Model\obj\Debug\net5.0\StockTracking.Model.AssemblyInfoInputs.cache
+D:\Inci\Projects\StockTracking\StockTracking.Model\obj\Debug\net5.0\StockTracking.Model.AssemblyInfo.cs
+D:\Inci\Projects\StockTracking\StockTracking.Model\obj\Debug\net5.0\StockTracking.Model.csproj.CoreCompileInputs.cache
+D:\Inci\Projects\StockTracking\StockTracking.Model\obj\Debug\net5.0\StockTracking.Model.dll
+D:\Inci\Projects\StockTracking\StockTracking.Model\obj\Debug\net5.0\ref\StockTracking.Model.dll
+D:\Inci\Projects\StockTracking\StockTracking.Model\obj\Debug\net5.0\StockTracking.Model.pdb
