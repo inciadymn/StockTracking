@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "qdJsA5irCGfsalRREXVCe8CUiU2gnBTCiZhPV43fDj62YIgwO8QxTsBOB7AnxbTxG2FFt1IUnE2crnHqnjOcQg==",
+  "success": true,
+  "projectFilePath": "D:\\Inci\\Projects\\StockTracking\\StockTracking.API\\StockTracking.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\incia\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\incia\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\incia\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\incia\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\incia\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\incia\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
