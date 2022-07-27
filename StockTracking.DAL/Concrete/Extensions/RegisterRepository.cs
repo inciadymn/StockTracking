@@ -13,7 +13,7 @@ namespace StockTracking.DAL.Concrete.Extensions
     {
         public static void AddScopeDAL(this IServiceCollection services)
         {
-            services.AddDbContext<StockTrakingDbContext>();
+            services.AddDbContext<StockTrackingDbContext>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
         }

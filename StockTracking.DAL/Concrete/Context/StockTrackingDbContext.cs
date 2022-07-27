@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace StockTracking.DAL.Concrete
 {
-    class StockTrakingDbContext : DbContext
+    class StockTrackingDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.; Database=StockTrakingDb; uid=sa; pwd=as");
+            optionsBuilder.UseSqlServer("Server=.; Database=StockTrackingDb; uid=sa; pwd=as");
         }
 
         public DbSet<Product> Products { get; set; }

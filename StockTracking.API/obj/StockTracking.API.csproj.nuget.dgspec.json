@@ -30,7 +30,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTraking.Business.csproj": {
+                "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTraking.Business.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -62,6 +66,200 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Inci\\Projects\\StockTracking\\StockTracking.DAL\\StockTracking.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Inci\\Projects\\StockTracking\\StockTracking.DAL\\StockTracking.DAL.csproj",
+        "projectName": "StockTracking.DAL",
+        "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTracking.DAL\\StockTracking.DAL.csproj",
+        "packagesPath": "C:\\Users\\incia\\.nuget\\packages\\",
+        "outputPath": "D:\\Inci\\Projects\\StockTracking\\StockTracking.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\incia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Inci\\Projects\\StockTracking\\StockTracking.Model\\StockTracking.Model.csproj": {
+                "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTracking.Model\\StockTracking.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Inci\\Projects\\StockTracking\\StockTracking.Model\\StockTracking.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Inci\\Projects\\StockTracking\\StockTracking.Model\\StockTracking.Model.csproj",
+        "projectName": "StockTracking.Model",
+        "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTracking.Model\\StockTracking.Model.csproj",
+        "packagesPath": "C:\\Users\\incia\\.nuget\\packages\\",
+        "outputPath": "D:\\Inci\\Projects\\StockTracking\\StockTracking.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\incia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTraking.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTraking.Business.csproj",
+        "projectName": "StockTraking.Business",
+        "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTraking.Business.csproj",
+        "packagesPath": "C:\\Users\\incia\\.nuget\\packages\\",
+        "outputPath": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\incia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Inci\\Projects\\StockTracking\\StockTracking.DAL\\StockTracking.DAL.csproj": {
+                "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTracking.DAL\\StockTracking.DAL.csproj"
+              },
+              "D:\\Inci\\Projects\\StockTracking\\StockTracking.Model\\StockTracking.Model.csproj": {
+                "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTracking.Model\\StockTracking.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

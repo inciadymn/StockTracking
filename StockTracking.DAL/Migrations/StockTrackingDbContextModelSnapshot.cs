@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using StockTracking.DAL;
+using StockTracking.DAL.Concrete;
 
 namespace StockTracking.DAL.Migrations
 {
-    [DbContext(typeof(StockTrakingDbContext))]
-    partial class StockTrakingDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(StockTrackingDbContext))]
+    partial class StockTrackingDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

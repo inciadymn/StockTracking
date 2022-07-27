@@ -11,7 +11,7 @@ namespace StockTraking.Business.Concrete
 {
     public class CategoryService : ICategoryService
     {
-        ICategoryRepository _categoryRepository;
+        private ICategoryRepository _categoryRepository;
 
         public CategoryService(ICategoryRepository categoryRepository)
         {

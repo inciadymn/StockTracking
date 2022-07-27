@@ -8,7 +8,7 @@ namespace StockTraking.Business.Concrete
 {
     public class ProductService : IProductService
     {
-        IProductRepository _productRepository;
+        private IProductRepository _productRepository;
 
         public ProductService(IProductRepository productRepository)
         {

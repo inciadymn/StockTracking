@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using StockTracking.DAL;
+using StockTracking.DAL.Concrete;
 
 namespace StockTracking.DAL.Migrations
 {
-    [DbContext(typeof(StockTrakingDbContext))]
-    [Migration("20220726135636_Initial")]
+    [DbContext(typeof(StockTrackingDbContext))]
+    [Migration("20220727115349_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

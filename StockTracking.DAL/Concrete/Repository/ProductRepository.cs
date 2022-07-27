@@ -10,9 +10,9 @@ namespace StockTracking.DAL.Concrete.Repository
 {
     class ProductRepository : IProductRepository
     {
-        private readonly StockTrakingDbContext _context;
+        private readonly StockTrackingDbContext _context;
 
-        public ProductRepository(StockTrakingDbContext context)
+        public ProductRepository(StockTrackingDbContext context)
         {
             _context = context; 
         }
