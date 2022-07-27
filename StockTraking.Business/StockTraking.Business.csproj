@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StockTracking.DAL\StockTracking.DAL.csproj" />
+    <ProjectReference Include="..\StockTracking.Model\StockTracking.Model.csproj" />
+  </ItemGroup>
+
+</Project>

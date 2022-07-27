@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StockTracking.DAL.Abstract
+namespace StockTraking.Business.Abstract
 {
-    public interface ICategoryRepository
+    interface ICategoryService
     {
         List<Category> GetAllCategories();
 
