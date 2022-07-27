@@ -1,13 +1,9 @@
 ﻿using StockTracking.Model.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace StockTraking.Business.Abstract
+namespace StockTracking.Business.Abstract
 {
-    interface IProductService
+    public interface IProductService
     {
         List<Product> GetAllProducts();
 

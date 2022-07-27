@@ -1,21 +1,19 @@
-﻿using StockTracking.Model.Entities;
-using System;
+﻿using StockTracking.Model.Dtos.Category;
+using StockTracking.Model.Entities;
+using StockTracking.Model.Requests.Category;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace StockTraking.Business.Abstract
+namespace StockTracking.Business.Abstract
 {
-    interface ICategoryService
+    public interface ICategoryService
     {
-        List<Category> GetAllCategories();
+        List<GetAllCategoryDto> GetAllCategories();
 
-        Category GetCategoryById(int id);
+        GetCategoryByIdDto GetCategoryById(int id);
 
-        Category CreateCategory(Category category);
+        CreateOrUpdateCategoryDto CreateCategory(CategoryRequest categoryRequest);
 
-        Category UpdateCategory(Category category);
+        CreateOrUpdateCategoryDto UpdateCategory(CategoryRequest categoryRequest);
 
         void DeleteCategory(int id);
     }

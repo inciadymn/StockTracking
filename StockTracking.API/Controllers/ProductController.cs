@@ -1,11 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using StockTracking.Business.Abstract;
 using StockTracking.Model.Entities;
-using StockTraking.Business.Concrete;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace StockTracking.API.Controllers
 {
@@ -13,9 +9,9 @@ namespace StockTracking.API.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private ProductService _productService;
+        private readonly IProductService _productService;
 
-        public ProductController(ProductService productService)
+        public ProductController(IProductService productService)
         {
             _productService = productService;
         }
@@ -33,19 +29,19 @@ namespace StockTracking.API.Controllers
         }
 
         [HttpPost]
-        public Product Post([FromBody]Product product)
+        public Product Post([FromBody] Product product)
         {
             return _productService.CreateProduct(product);
         }
 
         [HttpPut]
-        public Product Put([FromBody]Product product)
+        public Product Put([FromBody] Product product)
         {
             return _productService.UpdateProduct(product);
         }
 
         [HttpDelete("{id}")]
-        public void DeleteProduct(int id)
+        public void Delete(int id)
         {
             _productService.DeleteProduct(id);
         }

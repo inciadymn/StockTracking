@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockTracking.Model", "Stoc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockTracking.DAL", "StockTracking.DAL\StockTracking.DAL.csproj", "{C84F2D10-63D2-4568-8ABA-F9CF40C67C5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockTraking.Business", "StockTraking.Business\StockTraking.Business.csproj", "{80366FFE-52AC-42CB-8E59-ABD2FFB166F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockTracking.Business", "StockTraking.Business\StockTracking.Business.csproj", "{80366FFE-52AC-42CB-8E59-ABD2FFB166F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

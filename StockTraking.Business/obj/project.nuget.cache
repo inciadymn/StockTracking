@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YG2Do8WAN5Oc9pwfcC1ztUwkEgG6HUonB2RFomTxERGCt+a0s4xtapFyzFqChSv/wMraPg+kbKyqK8RBwE6OHw==",
+  "dgSpecHash": "SCzuaEi9vQM3Wqa2UWwf7DlqDmEgujp2J6Rrw6nj+bXvIGz2wlNKPhXqDLUwqFMu0JYUpKwg9Kb2kFMYqAmxNg==",
   "success": true,
-  "projectFilePath": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTraking.Business.csproj",
+  "projectFilePath": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTracking.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\incia\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

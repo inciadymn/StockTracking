@@ -1556,6 +1556,20 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "StockTracking.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "StockTracking.DAL": "1.0.0",
+          "StockTracking.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StockTracking.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StockTracking.Business.dll": {}
+        }
+      },
       "StockTracking.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1578,20 +1592,6 @@
         },
         "runtime": {
           "bin/placeholder/StockTracking.Model.dll": {}
-        }
-      },
-      "StockTraking.Business/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "StockTracking.DAL": "1.0.0",
-          "StockTracking.Model": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/StockTraking.Business.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/StockTraking.Business.dll": {}
         }
       }
     }
@@ -5876,6 +5876,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "StockTracking.Business/1.0.0": {
+      "type": "project",
+      "path": "../StockTraking.Business/StockTracking.Business.csproj",
+      "msbuildProject": "../StockTraking.Business/StockTracking.Business.csproj"
+    },
     "StockTracking.DAL/1.0.0": {
       "type": "project",
       "path": "../StockTracking.DAL/StockTracking.DAL.csproj",
@@ -5885,16 +5890,11 @@
       "type": "project",
       "path": "../StockTracking.Model/StockTracking.Model.csproj",
       "msbuildProject": "../StockTracking.Model/StockTracking.Model.csproj"
-    },
-    "StockTraking.Business/1.0.0": {
-      "type": "project",
-      "path": "../StockTraking.Business/StockTraking.Business.csproj",
-      "msbuildProject": "../StockTraking.Business/StockTraking.Business.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "StockTraking.Business >= 1.0.0",
+      "StockTracking.Business >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -5929,8 +5929,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTraking.Business.csproj": {
-              "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTraking.Business.csproj"
+            "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTracking.Business.csproj": {
+              "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTracking.Business.csproj"
             }
           }
         }

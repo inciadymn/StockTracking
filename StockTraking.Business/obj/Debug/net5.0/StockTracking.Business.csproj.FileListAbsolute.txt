@@ -1,0 +1,17 @@
+D:\Inci\Projects\StockTracking\StockTraking.Business\bin\Debug\net5.0\StockTracking.Business.deps.json
+D:\Inci\Projects\StockTracking\StockTraking.Business\bin\Debug\net5.0\StockTracking.Business.dll
+D:\Inci\Projects\StockTracking\StockTraking.Business\bin\Debug\net5.0\ref\StockTracking.Business.dll
+D:\Inci\Projects\StockTracking\StockTraking.Business\bin\Debug\net5.0\StockTracking.Business.pdb
+D:\Inci\Projects\StockTracking\StockTraking.Business\bin\Debug\net5.0\StockTracking.DAL.dll
+D:\Inci\Projects\StockTracking\StockTraking.Business\bin\Debug\net5.0\StockTracking.Model.dll
+D:\Inci\Projects\StockTracking\StockTraking.Business\bin\Debug\net5.0\StockTracking.DAL.pdb
+D:\Inci\Projects\StockTracking\StockTraking.Business\bin\Debug\net5.0\StockTracking.Model.pdb
+D:\Inci\Projects\StockTracking\StockTraking.Business\obj\Debug\net5.0\StockTracking.Business.csproj.AssemblyReference.cache
+D:\Inci\Projects\StockTracking\StockTraking.Business\obj\Debug\net5.0\StockTracking.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Inci\Projects\StockTracking\StockTraking.Business\obj\Debug\net5.0\StockTracking.Business.AssemblyInfoInputs.cache
+D:\Inci\Projects\StockTracking\StockTraking.Business\obj\Debug\net5.0\StockTracking.Business.AssemblyInfo.cs
+D:\Inci\Projects\StockTracking\StockTraking.Business\obj\Debug\net5.0\StockTracking.Business.csproj.CoreCompileInputs.cache
+D:\Inci\Projects\StockTracking\StockTraking.Business\obj\Debug\net5.0\StockTracking.Business.csproj.CopyComplete
+D:\Inci\Projects\StockTracking\StockTraking.Business\obj\Debug\net5.0\StockTracking.Business.dll
+D:\Inci\Projects\StockTracking\StockTraking.Business\obj\Debug\net5.0\ref\StockTracking.Business.dll
+D:\Inci\Projects\StockTracking\StockTraking.Business\obj\Debug\net5.0\StockTracking.Business.pdb

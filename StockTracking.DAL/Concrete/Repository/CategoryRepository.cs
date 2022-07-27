@@ -1,16 +1,14 @@
 ﻿using StockTracking.DAL.Abstract;
 using StockTracking.Model.Entities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StockTracking.DAL.Concrete.Repository
 {
-    class CategoryRepository : ICategoryRepository
+    public class CategoryRepository : ICategoryRepository
     {
         private readonly StockTrackingDbContext _context;
+
         public CategoryRepository(StockTrackingDbContext context)
         {
             _context = context;

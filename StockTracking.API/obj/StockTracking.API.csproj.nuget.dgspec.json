@@ -31,8 +31,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTraking.Business.csproj": {
-                "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTraking.Business.csproj"
+              "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTracking.Business.csproj": {
+                "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTracking.Business.csproj"
               }
             }
           }
@@ -204,12 +204,12 @@
         }
       }
     },
-    "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTraking.Business.csproj": {
+    "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTracking.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTraking.Business.csproj",
-        "projectName": "StockTraking.Business",
-        "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTraking.Business.csproj",
+        "projectUniqueName": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTracking.Business.csproj",
+        "projectName": "StockTracking.Business",
+        "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\StockTracking.Business.csproj",
         "packagesPath": "C:\\Users\\incia\\.nuget\\packages\\",
         "outputPath": "D:\\Inci\\Projects\\StockTracking\\StockTraking.Business\\obj\\",
         "projectStyle": "PackageReference",

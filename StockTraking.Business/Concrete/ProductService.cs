@@ -1,10 +1,10 @@
 ﻿using StockTracking.DAL.Abstract;
 using StockTracking.Model.Entities;
-using StockTraking.Business.Abstract;
+using StockTracking.Business.Abstract;
 using System;
 using System.Collections.Generic;
 
-namespace StockTraking.Business.Concrete
+namespace StockTracking.Business.Concrete
 {
     public class ProductService : IProductService
     {
