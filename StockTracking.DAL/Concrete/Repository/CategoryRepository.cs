@@ -10,29 +10,41 @@ namespace StockTracking.DAL.Concrete.Repository
 {
     class CategoryRepository : ICategoryRepository
     {
-        public Category CreateCategory(Category product)
+        private readonly StockTrakingDbContext _context;
+        public CategoryRepository(StockTrakingDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+
+        public Category CreateCategory(Category category)
+        {
+            _context.Categories.Add(category);
+            _context.SaveChanges();
+            return category;
         }
 
         public void DeleteCategory(int id)
         {
-            throw new NotImplementedException();
+            Category deletedCategory = GetCategoryById(id);
+            _context.Categories.Remove(deletedCategory);
+            _context.SaveChanges();
         }
 
         public List<Category> GetAllCategories()
         {
-            throw new NotImplementedException();
+            return _context.Categories.ToList();
         }
 
         public Category GetCategoryById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Categories.Where(a => a.Id == id).FirstOrDefault();
         }
 
-        public Category UpdateCategory(Category product)
+        public Category UpdateCategory(Category category)
         {
-            throw new NotImplementedException();
+            _context.Categories.Update(category);
+            _context.SaveChanges();
+            return category;
         }
     }
 }

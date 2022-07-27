@@ -19,27 +19,33 @@ namespace StockTracking.DAL.Concrete.Repository
 
         public Product CreateProduct(Product product)
         {
-            throw new NotImplementedException();
+            _context.Products.Add(product);
+            _context.SaveChanges();
+            return product;
         }
 
         public void DeleteProduct(int id)
         {
-            throw new NotImplementedException();
+            Product deletedProduct = GetProductById(id);
+            _context.Products.Remove(deletedProduct);
+            _context.SaveChanges();
         }
 
         public List<Product> GetAllProducts()
         {
-            throw new NotImplementedException();
+            return _context.Products.ToList();
         }
 
         public Product GetProductById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Products.Where(a => a.Id == id).FirstOrDefault();
         }
 
         public Product UpdateProduct(Product product)
         {
-            throw new NotImplementedException();
+            _context.Products.Update(product);
+            _context.SaveChanges();
+            return product;
         }
     }
 }
