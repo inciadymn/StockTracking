@@ -1,17 +1,19 @@
-﻿using StockTracking.Model.Entities;
+﻿using StockTracking.Model.Dtos.Product;
+using StockTracking.Model.Entities;
+using StockTracking.Model.Requests.Product;
 using System.Collections.Generic;
 
 namespace StockTracking.Business.Abstract
 {
     public interface IProductService
     {
-        List<Product> GetAllProducts();
+        List<GetAllProductsDto> GetAllProducts();
 
-        Product GetProductById(int id);
+        GetProductByIdDto GetProductById(int id);
 
-        Product CreateProduct(Product product);
+        CreateOrUpdateProductDto CreateProduct(ProductRequest productRequest);
 
-        Product UpdateProduct(Product product);
+        CreateOrUpdateProductDto UpdateProduct(ProductRequest productRequest);
 
         void DeleteProduct(int id);
     }

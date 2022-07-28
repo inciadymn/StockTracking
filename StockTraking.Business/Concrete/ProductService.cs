@@ -3,6 +3,8 @@ using StockTracking.Model.Entities;
 using StockTracking.Business.Abstract;
 using System;
 using System.Collections.Generic;
+using StockTracking.Model.Requests.Product;
+using StockTracking.Model.Dtos.Product;
 
 namespace StockTracking.Business.Concrete
 {
@@ -15,11 +17,18 @@ namespace StockTracking.Business.Concrete
             _productRepository = productRepository;
         }
 
-        public Product CreateProduct(Product product)
+        public CreateOrUpdateProductDto CreateProduct(ProductRequest productRequest)
         {
-            if (product != null)
+            if (productRequest != null)
             {
-                return _productRepository.CreateProduct(product);
+                Product product = new Product()
+                {
+                    Name = productRequest.Name,
+                    Quantity = productRequest.Quantity,
+                    CategoryId = productRequest.CategoryId
+                };
+
+                product = _productRepository.CreateProduct(product);
             }
             throw new Exception("null eror");
         }
