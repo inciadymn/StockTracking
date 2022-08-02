@@ -1,10 +1,10 @@
-﻿using StockTracking.DAL.Abstract;
+﻿using StockTracking.Business.Abstract;
+using StockTracking.DAL.Abstract;
+using StockTracking.Model.Dtos.Product;
 using StockTracking.Model.Entities;
-using StockTracking.Business.Abstract;
+using StockTracking.Model.Requests.Product;
 using System;
 using System.Collections.Generic;
-using StockTracking.Model.Requests.Product;
-using StockTracking.Model.Dtos.Product;
 
 namespace StockTracking.Business.Concrete
 {
@@ -42,23 +42,58 @@ namespace StockTracking.Business.Concrete
             throw new Exception("id can not be less than one");
         }
 
-        public List<Product> GetAllProducts()
+        public List<GetAllProductsDto> GetAllProducts()
         {
-            return _productRepository.GetAllProducts();
+            List<Product> products = _productRepository.GetAllProducts();
+
+            List<GetAllProductsDto> allProductsDto = new List<GetAllProductsDto>();
+
+            foreach (var item in products)
+            {
+                foreach (var itemDto in allProductsDto)
+                {
+                    itemDto.Name = item.Name;
+                    itemDto.Quantity = item.Quantity;
+                }
+            }
+
+            return allProductsDto;
         }
 
-        public Product GetProductById(int id)
+        public GetProductByIdDto GetProductById(int id)
         {
             if (id > 0)
             {
-                return _productRepository.GetProductById(id);
+                Product product= _productRepository.GetProductById(id);
+
+                GetProductByIdDto productDto = new GetProductByIdDto
+                {
+                    Name = product.Name,
+                    Quantity = product.Quantity
+                };
+
+                return productDto;
             }
             throw new Exception("id can not be less than one");
         }
 
-        public Product UpdateProduct(Product product)
+        public CreateOrUpdateProductDto UpdateProduct(ProductRequest productRequest)
         {
-            return _productRepository.UpdateProduct(product);
+            Product product = new Product
+            {
+                Name = productRequest.Name,
+                Quantity = productRequest.Quantity,
+                CategoryId=productRequest.CategoryId,
+            };
+
+            product= _productRepository.UpdateProduct(product);
+
+            return new CreateOrUpdateProductDto
+            {
+                Name = product.Name,
+                Quantity = product.Quantity,
+                CategoryId = product.CategoryId,
+            };
         }
     }
 }
