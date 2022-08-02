@@ -39,7 +39,8 @@ namespace StockTracking.Business.Concrete
             {
                 _productRepository.DeleteProduct(id);
             }
-            throw new Exception("id can not be less than one");
+
+            throw new Exception("id can not be less than one"); 
         }
 
         public List<GetAllProductsDto> GetAllProducts()

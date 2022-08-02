@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StockTracking.Business.Abstract;
 using StockTracking.Model.Entities;
+using StockTracking.Model.Requests.Category;
 using System.Collections.Generic;
 using System.Net;
 
@@ -25,27 +26,29 @@ namespace StockTracking.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public Category Get(int id)
+        public IActionResult Get(int id)
         {
-            return _categoryService.GetCategoryById(id);
+            return Ok(_categoryService.GetCategoryById(id));
         }
 
         [HttpPost]
-        public Category Post([FromBody] Category category)
+        public IActionResult Post([FromBody]CategoryRequest categoryRequest)
         {
-            return _categoryService.CreateCategory(category);
+            return Ok(_categoryService.CreateCategory(categoryRequest));
         }
 
         [HttpPut]
-        public Category Put([FromBody] Category category)
+        public IActionResult Put([FromBody]CategoryRequest categoryRequest)
         {
-            return _categoryService.UpdateCategory(category);
+            return Ok( _categoryService.UpdateCategory(categoryRequest));
         }
 
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
             _categoryService.DeleteCategory(id);
+
+            return Ok();
         }
     }
 }

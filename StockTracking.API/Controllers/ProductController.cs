@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StockTracking.Business.Abstract;
+using StockTracking.Model.Dtos.Product;
 using StockTracking.Model.Entities;
+using StockTracking.Model.Requests.Product;
 using System.Collections.Generic;
 
 namespace StockTracking.API.Controllers
@@ -17,33 +19,34 @@ namespace StockTracking.API.Controllers
         }
 
         [HttpGet]
-        public List<Product> Get()
+        public IActionResult Get()
         {
-            return _productService.GetAllProducts();
+            return Ok(_productService.GetAllProducts());
         }
 
         [HttpGet("{id}")]
-        public Product Get(int id)
+        public IActionResult Get(int id)
         {
-            return _productService.GetProductById(id);
+            return Ok(_productService.GetProductById(id));
         }
 
         [HttpPost]
-        public Product Post([FromBody] Product product)
+        public IActionResult Post([FromBody]ProductRequest productRequest)
         {
-            return _productService.CreateProduct(product);
+            return Ok(_productService.CreateProduct(productRequest));
         }
 
         [HttpPut]
-        public Product Put([FromBody] Product product)
+        public IActionResult Put([FromBody]ProductRequest productRequest)
         {
-            return _productService.UpdateProduct(product);
+            return Ok(_productService.UpdateProduct(productRequest));
         }
 
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
             _productService.DeleteProduct(id);
+            return Ok();
         }
     }
 }
