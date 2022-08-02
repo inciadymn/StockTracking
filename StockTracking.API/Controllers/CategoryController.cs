@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StockTracking.Business.Abstract;
+using StockTracking.Model.Dtos.Category;
 using StockTracking.Model.Entities;
 using StockTracking.Model.Requests.Category;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace StockTracking.API.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(typeof(List<Category>), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(List<GetAllCategoryDto>), (int)HttpStatusCode.OK)]
         public IActionResult Get()
         {
             return Ok(_categoryService.GetAllCategories());

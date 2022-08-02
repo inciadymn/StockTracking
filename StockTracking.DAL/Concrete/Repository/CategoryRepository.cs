@@ -1,4 +1,5 @@
-﻿using StockTracking.DAL.Abstract;
+﻿using Microsoft.EntityFrameworkCore;
+using StockTracking.DAL.Abstract;
 using StockTracking.Model.Entities;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +36,7 @@ namespace StockTracking.DAL.Concrete.Repository
 
         public Category GetCategoryById(int id)
         {
-            return _context.Categories.Where(a => a.Id == id).FirstOrDefault();
+            return _context.Categories.Where(a => a.Id == id).Include(x=>x.Products).FirstOrDefault();
         }
 
         public Category UpdateCategory(Category category)

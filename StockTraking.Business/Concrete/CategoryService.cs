@@ -1,6 +1,7 @@
 ﻿using StockTracking.Business.Abstract;
 using StockTracking.DAL.Abstract;
 using StockTracking.Model.Dtos.Category;
+using StockTracking.Model.Dtos.Product;
 using StockTracking.Model.Entities;
 using StockTracking.Model.Requests.Category;
 using System;
@@ -45,36 +46,36 @@ namespace StockTracking.Business.Concrete
 
         public List<GetAllCategoryDto> GetAllCategories()
         {
+
             return _categoryRepository.GetAllCategories()
                                       .Select(x => new GetAllCategoryDto()
-                                       {
-                                           Name = x.Name
-                                       }).ToList();
+                                      {
+                                          Name = x.Name
+                                      }).ToList();
         }
 
         public GetCategoryByIdDto GetCategoryById(int id)
         {
-            if (id > 1)
+            Category category = _categoryRepository.GetCategoryById(id);
+
+            if (category == null)
             {
-                Category category = _categoryRepository.GetCategoryById(id);
-
-                GetCategoryByIdDto categoryDto = new GetCategoryByIdDto()
-                {
-                    Name = category.Name,
-                };
-
-                foreach (var item in category.Products)
-                {
-                    foreach (var itemDto in categoryDto.Products)
-                    {
-                        itemDto.Name = item.Name;
-
-                    }
-                };
-
-                return categoryDto;
+                throw new Exception("category id is not exist");
             }
-            throw new Exception("id can not be less than one");
+
+            GetCategoryByIdDto categoryDto = new GetCategoryByIdDto()
+            {
+                Name = category.Name,
+            };
+
+            categoryDto.Products = new List<CategoryProductsDto>();
+
+            categoryDto.Products = category.Products.Select(x => new CategoryProductsDto()
+            {
+                Name = x.Name
+            }).ToList();
+
+            return categoryDto;
         }
 
         public CreateOrUpdateCategoryDto UpdateCategory(CategoryRequest categoryRequest)

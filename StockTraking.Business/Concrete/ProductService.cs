@@ -57,19 +57,20 @@ namespace StockTracking.Business.Concrete
 
         public GetProductByIdDto GetProductById(int id)
         {
-            if (id > 0)
+            Product product = _productRepository.GetProductById(id);
+
+            if (product==null)
             {
-                Product product = _productRepository.GetProductById(id);
-
-                GetProductByIdDto productDto = new GetProductByIdDto
-                {
-                    Name = product.Name,
-                    Quantity = product.Quantity
-                };
-
-                return productDto;
+                throw new Exception("product id is not exist");
             }
-            throw new Exception("id can not be less than one");
+
+            GetProductByIdDto productDto = new GetProductByIdDto
+            {
+                Name = product.Name,
+                Quantity = product.Quantity
+            };
+
+            return productDto;
         }
 
         public CreateOrUpdateProductDto UpdateProduct(ProductRequest productRequest)
