@@ -5,6 +5,7 @@ using StockTracking.Model.Entities;
 using StockTracking.Model.Requests.Product;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace StockTracking.Business.Concrete
 {
@@ -35,28 +36,21 @@ namespace StockTracking.Business.Concrete
 
         public void DeleteProduct(int id)
         {
-            if (id > 0)
+            if (id < 0)
             {
-                _productRepository.DeleteProduct(id);
+                throw new Exception("id can not be less than one");
             }
-
-            throw new Exception("id can not be less than one"); 
+            _productRepository.DeleteProduct(id);
         }
 
         public List<GetAllProductsDto> GetAllProducts()
         {
-            List<Product> products = _productRepository.GetAllProducts();
-
-            List<GetAllProductsDto> allProductsDto = new List<GetAllProductsDto>();
-
-            foreach (var item in products)
-            {
-                foreach (var itemDto in allProductsDto)
-                {
-                    itemDto.Name = item.Name;
-                    itemDto.Quantity = item.Quantity;
-                }
-            }
+            List<GetAllProductsDto> allProductsDto = _productRepository.GetAllProducts()
+                                                                       .Select(x => new GetAllProductsDto()
+                                                                       {
+                                                                           Name = x.Name,
+                                                                           Quantity = x.Quantity
+                                                                       }).ToList();
 
             return allProductsDto;
         }
@@ -65,7 +59,7 @@ namespace StockTracking.Business.Concrete
         {
             if (id > 0)
             {
-                Product product= _productRepository.GetProductById(id);
+                Product product = _productRepository.GetProductById(id);
 
                 GetProductByIdDto productDto = new GetProductByIdDto
                 {
@@ -84,10 +78,10 @@ namespace StockTracking.Business.Concrete
             {
                 Name = productRequest.Name,
                 Quantity = productRequest.Quantity,
-                CategoryId=productRequest.CategoryId,
+                CategoryId = productRequest.CategoryId,
             };
 
-            product= _productRepository.UpdateProduct(product);
+            product = _productRepository.UpdateProduct(product);
 
             return new CreateOrUpdateProductDto
             {

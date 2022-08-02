@@ -9,7 +9,7 @@ using StockTracking.DAL.Concrete;
 namespace StockTracking.DAL.Migrations
 {
     [DbContext(typeof(StockTrackingDbContext))]
-    [Migration("20220727115349_Initial")]
+    [Migration("20220802120357_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

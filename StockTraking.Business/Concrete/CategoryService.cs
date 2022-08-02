@@ -5,6 +5,7 @@ using StockTracking.Model.Entities;
 using StockTracking.Model.Requests.Category;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace StockTracking.Business.Concrete
 {
@@ -44,19 +45,11 @@ namespace StockTracking.Business.Concrete
 
         public List<GetAllCategoryDto> GetAllCategories()
         {
-            List<Category> categories = _categoryRepository.GetAllCategories();
-
-            List<GetAllCategoryDto> allCategoryDto = new List<GetAllCategoryDto>();
-
-            foreach (var item in categories)
-            {
-                foreach (var itemDto in allCategoryDto)
-                {
-                    itemDto.Name = item.Name;
-                }
-            }
-
-            return allCategoryDto;
+            return _categoryRepository.GetAllCategories()
+                                      .Select(x => new GetAllCategoryDto()
+                                       {
+                                           Name = x.Name
+                                       }).ToList();
         }
 
         public GetCategoryByIdDto GetCategoryById(int id)
@@ -91,11 +84,11 @@ namespace StockTracking.Business.Concrete
                 Name = categoryRequest.Name
             };
 
-            category =_categoryRepository.UpdateCategory(category);
+            category = _categoryRepository.UpdateCategory(category);
 
             return new CreateOrUpdateCategoryDto()
             {
-                Id=category.Id,
+                Id = category.Id,
                 Name = category.Name
             };
         }
