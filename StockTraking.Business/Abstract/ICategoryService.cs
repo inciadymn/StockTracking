@@ -13,7 +13,7 @@ namespace StockTracking.Business.Abstract
 
         CreateOrUpdateCategoryDto CreateCategory(CategoryRequest categoryRequest);
 
-        CreateOrUpdateCategoryDto UpdateCategory(CategoryRequest categoryRequest);
+        CreateOrUpdateCategoryDto UpdateCategory(CategoryRequest categoryRequest, int id);
 
         void DeleteCategory(int id);
     }

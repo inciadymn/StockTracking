@@ -39,9 +39,9 @@ namespace StockTracking.API.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put([FromBody]CategoryRequest categoryRequest)
+        public IActionResult Put([FromBody]CategoryRequest categoryRequest, int id)
         {
-            return Ok( _categoryService.UpdateCategory(categoryRequest));
+            return Ok( _categoryService.UpdateCategory(categoryRequest, id));
         }
 
         [HttpDelete("{id}")]
