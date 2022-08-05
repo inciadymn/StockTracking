@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using StockTracking.DAL.Abstract;
 using StockTracking.Model.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -25,6 +26,11 @@ namespace StockTracking.DAL.Concrete.Repository
         public void DeleteCategory(int id)
         {
             Category deletedCategory = GetCategoryById(id);
+
+            if (deletedCategory==null)
+            {
+                throw new ArgumentNullException("category is not exits");
+            }
             _context.Categories.Remove(deletedCategory);
             _context.SaveChanges();
         }

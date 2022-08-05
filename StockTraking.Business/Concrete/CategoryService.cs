@@ -47,7 +47,6 @@ namespace StockTracking.Business.Concrete
 
         public List<GetAllCategoryDto> GetAllCategories()
         {
-
             return _categoryRepository.GetAllCategories()
                                       .Select(x => new GetAllCategoryDto()
                                       {
