@@ -20,18 +20,21 @@ namespace StockTracking.Business.Concrete
 
         public CreateOrUpdateProductDto CreateProduct(ProductRequest productRequest)
         {
-            if (productRequest != null)
+            Product product = new Product()
             {
-                Product product = new Product()
-                {
-                    Name = productRequest.Name,
-                    Quantity = productRequest.Quantity,
-                    CategoryId = productRequest.CategoryId
-                };
+                Name = productRequest.Name,
+                Quantity = productRequest.Quantity,
+                CategoryId = productRequest.CategoryId
+            };
 
-                product = _productRepository.CreateProduct(product);
-            }
-            throw new Exception("null eror");
+            product = _productRepository.CreateProduct(product);
+
+            return new CreateOrUpdateProductDto()
+            {
+                Name = product.Name,
+                Quantity = product.Quantity,
+                CategoryId = product.CategoryId
+            };
         }
 
         public void DeleteProduct(int id)
@@ -59,24 +62,26 @@ namespace StockTracking.Business.Concrete
         {
             Product product = _productRepository.GetProductById(id);
 
-            if (product==null)
+            if (product == null)
             {
                 throw new Exception("product id is not exist");
             }
 
-            GetProductByIdDto productDto = new GetProductByIdDto
+            GetProductByIdDto productDto = new GetProductByIdDto()
             {
                 Name = product.Name,
-                Quantity = product.Quantity
+                Quantity = product.Quantity,
+                CategoryId=product.CategoryId
             };
 
             return productDto;
         }
 
-        public CreateOrUpdateProductDto UpdateProduct(ProductRequest productRequest)
+        public CreateOrUpdateProductDto UpdateProduct(ProductRequest productRequest, int id)
         {
             Product product = new Product
             {
+                Id=id,
                 Name = productRequest.Name,
                 Quantity = productRequest.Quantity,
                 CategoryId = productRequest.CategoryId,

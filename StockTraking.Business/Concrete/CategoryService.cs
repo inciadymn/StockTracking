@@ -21,7 +21,7 @@ namespace StockTracking.Business.Concrete
 
         public CreateOrUpdateCategoryDto CreateCategory(CategoryRequest categoryRequest)
         {
-            var category = new Category()
+            Category category = new Category()
             {
                 Name = categoryRequest.Name
             };
@@ -42,7 +42,7 @@ namespace StockTracking.Business.Concrete
                 throw new Exception("id can not be less than one");
             }
 
-            _categoryRepository.DeleteCategory(id); 
+            _categoryRepository.DeleteCategory(id);
         }
 
         public List<GetAllCategoryDto> GetAllCategories()
@@ -71,9 +71,9 @@ namespace StockTracking.Business.Concrete
             categoryDto.Products = new List<CategoryProductsDto>();
 
             categoryDto.Products = category.Products.Select(x => new CategoryProductsDto()
-                                                    {
-                                                        Name = x.Name
-                                                    }).ToList();
+            {
+                Name = x.Name
+            }).ToList();
 
             return categoryDto;
         }
@@ -83,7 +83,7 @@ namespace StockTracking.Business.Concrete
             Category category = new Category()
             {
                 Name = categoryRequest.Name,
-                Id=id
+                Id = id
             };
 
             category = _categoryRepository.UpdateCategory(category);

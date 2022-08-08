@@ -37,9 +37,9 @@ namespace StockTracking.API.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put([FromBody]ProductRequest productRequest)
+        public IActionResult Put([FromBody]ProductRequest productRequest, int id)
         {
-            return Ok(_productService.UpdateProduct(productRequest));
+            return Ok(_productService.UpdateProduct(productRequest, id));
         }
 
         [HttpDelete("{id}")]

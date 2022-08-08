@@ -13,7 +13,7 @@ namespace StockTracking.Business.Abstract
 
         CreateOrUpdateProductDto CreateProduct(ProductRequest productRequest);
 
-        CreateOrUpdateProductDto UpdateProduct(ProductRequest productRequest);
+        CreateOrUpdateProductDto UpdateProduct(ProductRequest productRequest, int id);
 
         void DeleteProduct(int id);
     }

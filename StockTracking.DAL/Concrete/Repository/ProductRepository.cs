@@ -27,6 +27,11 @@ namespace StockTracking.DAL.Concrete.Repository
         public void DeleteProduct(int id)
         {
             Product deletedProduct = GetProductById(id);
+
+            if (deletedProduct==null)
+            {
+                throw new Exception("product is not exits");
+            }
             _context.Products.Remove(deletedProduct);
             _context.SaveChanges();
         }
