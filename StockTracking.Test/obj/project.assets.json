@@ -7714,9 +7714,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Inci\\Projects\\StockTracking\\StockTracking.Test\\StockTracking.Test.csproj",
-      "projectName": "StockTracking.Test",
-      "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTracking.Test\\StockTracking.Test.csproj",
+      "projectUniqueName": "D:\\Inci\\Projects\\StockTracking\\StockTracking.Test\\StockTracking.Testtt.csproj",
+      "projectName": "StockTracking.Testtt",
+      "projectPath": "D:\\Inci\\Projects\\StockTracking\\StockTracking.Test\\StockTracking.Testtt.csproj",
       "packagesPath": "C:\\Users\\incia\\.nuget\\packages\\",
       "outputPath": "D:\\Inci\\Projects\\StockTracking\\StockTracking.Test\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FP+R7OLK/3lKOdSmZsXUzUyq5Wyc+dyPU0EruHkuJf38z7B46vpuB9GNSyL0YqMW+BVqP8I0j5CbEMCh5rDXWA==",
+  "dgSpecHash": "7P8LC+EHEy1bnkiYEYn1Iuoiq55Tqme9FvHx8770lP4pZHV3Rmz3QqBtAuy1tZzXw4t2dNjtpI4uFTthKK1bCg==",
   "success": true,
-  "projectFilePath": "D:\\Inci\\Projects\\StockTracking\\StockTracking.Test\\StockTracking.Test.csproj",
+  "projectFilePath": "D:\\Inci\\Projects\\StockTracking\\StockTracking.Test\\StockTracking.Testtt.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\incia\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
